@@ -1,0 +1,327 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+/* page.1 */
+.header{
+    margin: 0 auto;
+}
+.menu{
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    justify-content: center;
+    list-style: none;  
+}
+
+.menu a{
+    font-size: 28px;
+    line-height: 1.5;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin-right: 40px;
+}
+.menu a:hover{
+    background-color: rgb(237, 237, 237);
+}
+
+.About{
+    display: flex;
+    max-width: 100%;
+    max-height: 640px;
+    margin-bottom: 80px;
+    border-top: 1px solid #6C757D;
+    border-bottom: 1px solid #6C757D;
+}
+
+.text-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.img-section,.text-section{
+    flex:1 1 50%;    
+    box-sizing: border-box;
+}
+
+.img-section img{
+    max-width: 100%;
+    object-fit: cover;
+    aspect-ratio:1.48125/1;
+}
+
+.text-section .date{
+    font-size:16px;
+    font-weight: 500;
+}
+
+.text-news{
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.text-section .newstitle{
+    font-size: 24px;
+    color: #0027D5;
+    font-weight: bold;
+    margin-top: 4px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.text-section .newsbutton{
+    font-size: 16px;
+    color: white;
+    background-color: #0027D5;
+    border-radius: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-decoration: none;
+    text-align: center;
+    width: 88px;
+    height: 36px;
+}
+.text-section .newsbutton:hover{
+    background-color: darkblue;
+}
+
+.text-section .headline{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+@media (max-width: 375px) {
+    .About {
+        flex-direction: column;
+    }
+    .text-section{
+        margin:0 auto;
+        margin-top: 48px;
+        margin-left: 12px;
+        margin-bottom: 48px;
+    }
+
+    .img-section{
+        content: url("img/m-About-img.png");
+    }
+}
+
+
+/* page.2-4 */
+.content{
+  max-width: 636px;
+  margin: 0 auto;
+  line-height: 1.5;
+  margin-bottom: 48px;
+}
+.content h2 {
+  color: #0027D5;
+  font-size: 28px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+.content h3{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    margin-top: 24px;
+}
+p{ 
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing:0%;
+    margin-bottom: 4px;
+}
+ul, ol{
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 20px;
+    margin-bottom: 24px;
+}
+.preface p{
+    margin-bottom: 48px;
+}
+.point{
+  color: #0027D5;
+}
+.column h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.content img{
+  vertical-align: middle;
+  max-width: 100%;
+}
+.column{
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.column p:not(.msg) {
+    margin-bottom: 8px;
+}
+.summary{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 4px;
+  background-color: #EDEDED;
+  border-radius: 24px;
+  padding: 24px;
+}
+.conclusion .summary{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.conclusion{
+    margin-bottom: 48px;
+}
+.pagefunction{
+  display:flex;
+  justify-content:space-between;
+  margin:24px auto;
+}
+.pagechange{
+  display:inline-block;
+  border-radius: 40px;
+  border:1px black solid;
+  padding: 8px 16px;
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing:0%;
+  cursor: pointer; /* 滑鼠移上去像按鈕 */
+  text-align: center; /* 置中文字 */
+  text-decoration: none; /* 去除底線（若是連結） */
+  background-color: white; /* 可選 */
+  color: #333;        
+}
+
+
+@media(max-width: 375px){
+  .content{
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .preface-img{
+    content: url("img/m-preface-img.png");
+  }
+  .FrameAndTool-img{
+    content: url("img/m-FrameAndTool-img.png");
+  }
+  .community-img{
+    content: url("img/m-community-img.png");
+  }
+  .conclusion-img{
+  content: url("img/m-conclusion-img.png");
+  }
+}
+
+
+
+/* footer */
+.footer{
+    text-align: center;
+    border-top: 1px solid #6C757D;
+}
+.footer-inner{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    margin:27px 0px 35px 0px;
+}
+
+
+.contact{
+    font-size: 32px;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    margin:10px 400px 0 40px;
+}
+.social-media img{
+    max-width: 40px;
+    max-height: 40px;
+    justify-content:space-between;
+    margin:27px 4px 0 0;
+}
+
+.footer .rights{
+    font-size: 16px;
+}
+
+@media (max-width: 375px){
+    .footer-inner{
+        display: none;
+    }
+    .footer .rights{
+        margin:24px 40px 24px 40px;
+    }
+}
