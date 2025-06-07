@@ -49,11 +49,7 @@ table {
 }
 
 
-body{
-    font-family: "Noto Sans TC", sans-serif;
-    padding-left: 12px;
-    padding-right: 12px;
-}
+
 
 /* page.1 */
 .header{
@@ -115,6 +111,7 @@ body{
 .text-news{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     line-height: 1.5;
 }
 
@@ -296,6 +293,7 @@ ul, ol p:not(.social-media){
     border-top: 1px solid #6C757D;
 }
 .footer-inner{
+    width: 100%;
     display: flex;
     justify-content: center;    
     align-items: center;
@@ -305,9 +303,8 @@ ul, ol p:not(.social-media){
 
 
 .contact{
-    width: 100%;
     max-width: 1036px;
-    font-size: 32px;
+    font-size: clamp(25px, 6vw, 32px);
     color: black;
     font-weight: 500;
     margin:10px 24px 0 40px;
@@ -330,4 +327,10 @@ ul, ol p:not(.social-media){
     .footer .rights{
         margin:24px 40px 24px 40px;
     }
+}
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    padding-left: 12px;
+    padding-right: 12px;
 }
